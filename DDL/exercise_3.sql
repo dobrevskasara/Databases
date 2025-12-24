@@ -1,15 +1,17 @@
 Релационата база е дефинирана преку следните релации: 
-Muzicar(id, ime, prezime, datum_ragjanje)
-Muzicar_instrument(id_muzicar*, instrument)
-Bend(id, ime, godina_osnovanje)
-Bend_zanr(id_bend*, zanr)
-Nastan(id, cena, kapacitet)
-Koncert(id*, datum, vreme)
-Festival(id*, ime)
-Festival_odrzuvanje(id*, datum_od, datum_do)
-Muzicar_bend(id_muzicar*, id_bend*, datum_napustanje)
-Festival_bend(id_festival*, datum_od*, id_bend*)
-Koncert_muzicar_bend(id_koncert*, id_muzicar*, id_bend*)
+Muzicar(#id, ime, prezime, datum_ragjanje)
+Muzicar_instrument(#id_muzicar*, #instrument)
+Bend(#id, ime, godina_osnovanje)
+Bend_zanr(#id_bend*, #zanr)
+Nastan(#id, cena, kapacitet)
+Koncert(#id*, datum, vreme)
+Festival(#id*, ime)
+Festival_odrzuvanje(#id*, #datum_od, datum_do)
+Muzicar_bend(#id_muzicar*, #id_bend*, datum_napustanje)
+Festival_bend(#id_festival*, #datum_od*, #id_bend*)
+Koncert_muzicar_bend(#id_koncert*, #id_muzicar*, #id_bend*)
+
+(Примарните клучеви (primary) се означени со # пред него, додека па надворешните (foreign клучевите) се означени со * по него)
 
 Да се напишат соодветните DDL изрази за ентитетните множества „БЕНД“ и „ФЕСТИВАЛ_БЕНД“, како и за евентуалните релации 
 кои произлегуваат од истите, доколку треба да бидат исполнети следните барања:
